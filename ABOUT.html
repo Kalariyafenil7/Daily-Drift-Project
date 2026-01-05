@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Daily Drift</title>
+
+    <style>
+        :root {
+            --green: #22c55e;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --soft: #f0fdf4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        /* ================= HEADER ================= */
+        header {
+            background: #fff;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--green);
+        }
+
+        .logo span {
+            margin-left: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 500;
+        }
+
+        .nav-links a.active {
+            color: var(--green);
+            background: #dcfce7;
+            padding: 6px 12px;
+            border-radius: 20px;
+        }
+
+        .btn {
+            background: var(--green);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* ================= HERO ================= */
+        .hero {
+            background: linear-gradient(#f0fdf4, #fefce8);
+            padding: 90px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            color: var(--dark);
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 15px auto 0;
+            font-size: 18px;
+        }
+
+        /* ================= STORY ================= */
+        .section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        .story {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .story h2 {
+            font-size: 32px;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .story p {
+            margin-bottom: 15px;
+        }
+
+        .story img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ================= VALUES ================= */
+        .values-wrapper {
+            background: linear-gradient(#f0fdf4, #fefce8);
+        }
+
+        .values {
+            text-align: center;
+        }
+
+        .values h2 {
+            font-size: 32px;
+            color: var(--dark);
+        }
+
+        .values p {
+            margin-top: 10px;
+            color: #64748b;
+        }
+
+        .cards {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .card h3 {
+            margin-top: 15px;
+            color: var(--dark);
+        }
+
+        .card p {
+            margin-top: 10px;
+            font-size: 15px;
+        }
+
+        /* ================= IMPACT ================= */
+        .impact {
+            text-align: center;
+        }
+
+        .impact h2 {
+            font-size: 32px;
+            color: var(--dark);
+            margin-bottom: 40px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .stat {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            padding: 45px 20px;
+            border-radius: 20px;
+        }
+
+        .stat h3 {
+            font-size: 40px;
+        }
+
+        .stat p {
+            margin-top: 8px;
+            font-size: 16px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 992px) {
+            .story {
+                grid-template-columns: 1fr;
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="nav">
+            <div class="logo">🚲 <span>Daily Drift</span></div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#" class="active">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Login</a>
+                <a href="#" class="btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>About Daily Drift</h1>
+        <p>
+            We're on a mission to make bike pooling accessible, sustainable, and
+            community-driven. Join us in creating a better way to commute.
+        </p>
+    </section>
+
+    <!-- STORY -->
+    <section class="section story">
+        <div>
+            <h2>Our Story</h2>
+            <p>
+                Daily Drift was born from a simple observation: thousands of people bike
+                the same routes every day, often alone.
+            </p>
+            <p>
+                What started as a small project among friends has grown into a platform
+                serving riders across the city.
+            </p>
+            <p>
+                Today, we're proud to be part of the growing movement toward sustainable
+                urban transportation, one ride at a time.
+            </p>
+        </div>
+        <div>
+            <img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf" alt="Cyclists">
+        </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="values-wrapper">
+        <div class="section values">
+            <h2>Our Values</h2>
+            <p>The principles that guide everything we do</p>
+
+            <div class="cards">
+                <div class="card">
+                    ❤️
+                    <h3>Community First</h3>
+                    <p>Building connections and fostering a supportive rider community.</p>
+                </div>
+
+                <div class="card">
+                    🌱
+                    <h3>Sustainability</h3>
+                    <p>Reducing carbon emissions and promoting eco-friendly transport.</p>
+                </div>
+
+                <div class="card">
+                    🛡️
+                    <h3>Safety</h3>
+                    <p>Ensuring secure and verified rides for everyone.</p>
+                </div>
+
+                <div class="card">
+                    ⚡
+                    <h3>Innovation</h3>
+                    <p>Continuously improving through technology and feedback.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="section impact">
+        <h2>Making an Impact Together</h2>
+        <div class="stats">
+            <div class="stat">
+                <h3>10K+</h3>
+                <p>Active Riders</p>
+            </div>
+            <div class="stat">
+                <h3>50K+</h3>
+                <p>Rides Shared</p>
+            </div>
+            <div class="stat">
+                <h3>100K+</h3>
+                <p>Miles Saved</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
