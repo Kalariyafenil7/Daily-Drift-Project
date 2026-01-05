@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Drift</title>
+
+    <style>
+        :root {
+            --green: #28b463;
+            --dark: #1e1e1e;
+        }
+
+        /* ===== RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #f6ffe8, #fffbe6);
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 5%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--green);
+        }
+
+        .logo span {
+            background: var(--green);
+            color: white;
+            padding: 6px 8px;
+            border-radius: 50%;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 15px;
+        }
+
+        nav a.active {
+            color: var(--green);
+            font-weight: 600;
+        }
+
+        .signup-btn {
+            background: var(--green);
+            color: white;
+            padding: 8px 14px;
+            border-radius: 6px;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 5%;
+            gap: 40px;
+        }
+
+        .hero-text {
+            max-width: 550px;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(32px, 5vw, 54px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .hero-text h1 span {
+            color: var(--green);
+        }
+
+        .hero-text p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--green);
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--green);
+            color: var(--green);
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        /* ===== IMAGE ===== */
+        .hero-image img {
+            width: 100%;
+            max-width: 520px;
+            border-radius: 18px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ===== TABLET ===== */
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 600px) {
+            nav {
+                display: none;
+            }
+
+            .hero {
+                padding: 40px 6%;
+            }
+
+            .hero-text p {
+                font-size: 15px;
+            }
+
+            .buttons a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <span>🚴</span> Daily Drift
+        </div>
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Login</a>
+            <a href="#" class="signup-btn">Sign Up</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>
+                Share Your Ride,<br>
+                <span>Share the Joy</span>
+            </h1>
+            <p>
+                Join the community of bike enthusiasts.
+                Find rides, make friends, and contribute to a greener planet.
+            </p>
+
+            <div class="buttons">
+                <a href="#" class="btn-primary">Get Started</a>
+                <a href="#" class="btn-outline">Learn More</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="F:\fenu\project\Ride_sharing.jpg" alt="Cycling">
+        </div>
+    </section>
+
+</body>
+
+</html>

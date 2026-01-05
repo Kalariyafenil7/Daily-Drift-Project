@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Drift – Find Rides</title>
+
+    <style>
+        :root {
+            --primary: #22c55e;
+            --dark: #1f2937;
+            --gray: #6b7280;
+            --light: #f9fafb;
+            --border: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        /* ===== NAVBAR ===== */
+        header {
+            background: #fff;
+            border-bottom: 1px solid var(--border);
+            padding: 12px 24px;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .logo span {
+            background: var(--primary);
+            color: #fff;
+            padding: 6px 10px;
+            border-radius: 50%;
+            font-size: 14px;
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        nav a.active {
+            color: var(--primary);
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #ecfdf5;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: var(--primary);
+        }
+
+        /* ===== SEARCH BAR ===== */
+        .search-wrapper {
+            background: #fff;
+            margin: 24px auto;
+            max-width: 1200px;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .search-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .search-box {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .search-box label {
+            font-size: 13px;
+            color: var(--gray);
+        }
+
+        .search-box input {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            font-size: 14px;
+            outline: none;
+        }
+
+        /* ===== RIDES SECTION ===== */
+        .rides {
+            max-width: 1200px;
+            margin: 24px auto;
+            padding: 0 20px;
+        }
+
+        .rides h2 {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+
+        .empty-state {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .empty-icon {
+            font-size: 48px;
+            color: var(--border);
+            margin-bottom: 16px;
+        }
+
+        .empty-state h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .empty-state p {
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .empty-state a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .search-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                margin-top: 12px;
+                gap: 16px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 12px 16px;
+            }
+
+            .rides h2 {
+                font-size: 16px;
+            }
+
+            .empty-state {
+                padding: 40px 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <span>🚲</span>
+                Daily Drift
+            </div>
+
+            <nav>
+                <a href="#">Dashboard</a>
+                <a href="#" class="active">Find Rides</a>
+                <a href="#">Create Ride</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <div class="profile">👤 Yash Bhesaniya</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== SEARCH ===== -->
+    <section class="search-wrapper">
+        <div class="search-grid">
+            <div class="search-box">
+                <label>Starting Point</label>
+                <input type="text" placeholder="Search by source">
+            </div>
+
+            <div class="search-box">
+                <label>Destination</label>
+                <input type="text" placeholder="Search by destination">
+            </div>
+
+            <div class="search-box">
+                <label>Date</label>
+                <input type="date">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RIDES ===== -->
+    <section class="rides">
+        <h2>Available Rides (0)</h2>
+
+        <div class="empty-state">
+            <div class="empty-icon">🔍</div>
+            <h3>No rides found</h3>
+            <p>There are no available rides at the moment</p>
+            <a href="#">Why not create a ride instead?</a>
+        </div>
+    </section>
+
+</body>
+
+</html>
